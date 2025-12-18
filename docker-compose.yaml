@@ -40,7 +40,7 @@ services:
       - MYSQL_DB=devops
 
     networks:
-      - two-tier-nt
+      - two-tier
 
     depends_on:
       mysql:
