@@ -1,14 +1,14 @@
 pipeline{
     agent any
     stages{
-        stage('Clone repo'){
+        stage('Clone git repo'){
             steps{
                 git branch: 'main', url: 'https://github.com/SirohiPulkit/DevOps_2Tire_flask.git'
             }
         }
-        stage('Build image'){
+        stage('Buld docker images'){
             steps{
-                sh 'docker build -t flask-app:latest .'
+                sh 'docker build -t flask-app .'
             }
         }
         stage('Deploy with docker compose'){
