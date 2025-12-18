@@ -14,7 +14,7 @@ services:
       - mysql_data:/var/lib/mysql
 
     networks:
-      - two-tier-nt
+      - two-tier
 
     restart: always
     healthcheck:
